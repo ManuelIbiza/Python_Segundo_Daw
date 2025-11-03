@@ -1,0 +1,26 @@
+{
+	"usuarios": [
+		{
+			"nombre": "Juan",
+			"edad": 25,
+			"ciudad": "Madrid"
+		},
+		{
+			"nombre": "Mar\u00eda",
+			"edad": 30,
+			"ciudad": "Barcelona"
+		},
+		{
+			"nombre": "Pedro",
+			"edad": 22,
+			"ciudad": "Valencia"
+		},
+		{
+			"nombre": "Luisa",
+			"edad": 22,
+			"ciudad": "Mallorca"
+		}
+	],
+	"total_usuarios": 4,
+	"fecha_creacion": "2025-01-01"
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script type="text/javascript">
+            /* Llamamos a una vista dependiendo del botón pulsado para leer o escribir JSON */
+            function leer_o_escribir(modo) {
+                url = document.getElementById("formulario")
+                if (modo == 1) {
+                     url.action = "/app3_json/escritura_json";
+                }
+                else {
+                     url.action = "/app3_json/lectura_json";
+                }
+            }
+        </script>
+    </head>
+    <body>
+    <strong>APP3</strong><br><br>
+        {% comment %}
+            La propiedad action del form está vacía. Tendrá contenido dependiendo del botón que se pulse,
+            el cual llama a una función de javascript para ello.
+            Este comentario no aparecerá en HTML porque es de Django y se procesa amntes de cargar esta página.
+        {% endcomment %}
+        <form id="formulario" action="" method="get">
+            <input type="submit" value="Escribe esos datos en JSON!" onclick="leer_o_escribir(1)"><br><br>
+            <input type="submit" value="Lee esos datos de JSON!" onclick="leer_o_escribir(2)"><br><br>
+        </form>
+        <a href="{% url 'app0:index'%}">Volver</a>
+    </body>
+</html>

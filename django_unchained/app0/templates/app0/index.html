@@ -1,0 +1,22 @@
+{% comment %}
+Esto no aparecerá en HTML.
+Para poder usar los contenidos de static primero debemos cargarlos
+{% endcomment %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+APP0 ------------------------------------------<br>
+<p>
+    <a href="{% url 'app1:base' %}">APP1</a><br>
+    <a href="{% url 'app2:base' %}">APP2</a><br>
+    <a href="{% url 'app3_json:base' %}">APP3_JSON</a><br>
+</p>
+<img src="{% static 'images/img1.jpg' %}">
+
+</body>
+</html>

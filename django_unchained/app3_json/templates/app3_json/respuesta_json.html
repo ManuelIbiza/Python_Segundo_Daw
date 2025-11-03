@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Datos JSON</title>
+</head>
+<body>
+    <h1>Leyendo datos de JSON</h1>
+
+    <!-- Mostramos todos los datos y usamos safe para que muestra las etiquetas html
+     correctamente si las hubiere-->
+    <pre>{{ datos|safe }}</pre><br><br>
+
+    <!-- Para acceder a propiedades específicas -->
+    <h2>Accediendo a propiedades específicas del JSON...</h2>
+    {% comment %}
+        Tanto este comentario como el for siguiente lo preprocesa Django
+        antes de devolver el documento HTML
+    {% endcomment %}
+
+    {% for registro in datos.usuarios %}
+        -----------------------------------------------
+        <p>Nombre: {{ registro.nombre }}</p>
+        <p>Edad: {{ registro.edad }}</p>
+        <p>Ciudad: {{ registro.ciudad }}</p>
+    {% endfor %}
+
+    <!-- Manera segura de acceder para que no nos inyecten código malicioso -->
+    <h2>Accediendo de manera segura</h2>
+    <!-- Esto genera una etiqueta script de tipo json para leer los datos (inspeccionar código en navegador) -->
+    {{ datos|json_script:"datos_json" }}
+
+    <script>
+        const datos_seguros = JSON.parse(document.getElementById('datos_json').textContent);
+        /* Mostramos el registro entero */
+        document.write(JSON.stringify(datos_seguros.usuarios[0]) + "<br>");
+        /* Atributo a atributo */
+        document.write(datos_seguros.usuarios[0].nombre + "<br>");
+        document.write(datos_seguros.usuarios[0].edad + "<br>");
+        document.write(datos_seguros.usuarios[0].ciudad + "<br>");
+    </script>
+
+</body>
+</html>
