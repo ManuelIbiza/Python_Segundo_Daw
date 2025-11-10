@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script type="text/javascript">
+            /* Llamamos a una vista dependiendo del botón pulsado para leer o escribir JSON */
+            /*function leer_o_escribir(modo) {
+                url = document.getElementById("formulario")
+                if (modo == 1) {
+                     url.action = "/app3_json/escritura_json";
+                }
+                else {
+                     url.action = "/app3_json/lectura_json";
+                }
+            }*/
+        </script>
+    </head>
+    <body>
+    <strong>APP4_Biblioteca</strong><br><br>
+        {% comment %}
+            Aquí es donde colocaría un comentario en django...
+
+            SI TUVIERA ALGO QUE COMENTAR!
+        {% endcomment %}
+        <form id="formulario" action="" method="get">
+            <select id="lectores" name="lectores">
+                <option value = "Joaquin">Joaquín Suárez</option>
+                <option value = "Ana">Ana Torres</option>
+                <option value = "Leo">Leo Messi</option>
+            </select>
+        </form>
+        <a href="{% url 'app0:index'%}">Volver</a>
+    </body>
+</html>

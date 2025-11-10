@@ -23,4 +23,5 @@ urlpatterns = [
     path("app1/", include("app1.urls")),
     path("app2/", include("app2.urls")),
     path("app3_json/", include("app3_json.urls")),
+    path("app4_biblioteca", include("app4_biblioteca.urls"))
 ]
