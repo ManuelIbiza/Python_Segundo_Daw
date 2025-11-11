@@ -5,15 +5,15 @@
         <title>Title</title>
         <script type="text/javascript">
             /* Llamamos a una vista dependiendo del botón pulsado para leer o escribir JSON */
-            /*function leer_o_escribir(modo) {
+            function leer_o_escribir(modo) {
                 url = document.getElementById("formulario")
                 if (modo == 1) {
-                     url.action = "/app3_json/escritura_json";
+                     url.action = "/app4_biblioteca/mostrar_uno";
                 }
                 else {
-                     url.action = "/app3_json/lectura_json";
+                     url.action = "/app4_biblioteca/mostrar_todos";
                 }
-            }*/
+            }
         </script>
     </head>
     <body>
@@ -25,9 +25,11 @@
         {% endcomment %}
         <form id="formulario" action="" method="get">
             <select id="lectores" name="lectores">
-                <option value = "Joaquin">Joaquín Suárez</option>
-                <option value = "Ana">Ana Torres</option>
-                <option value = "Leo">Leo Messi</option>
+                <option value = "Laura Fernández Martín">Laura Fernández Martín</option>
+                <option value = "Carlos Gómez Ruiz">Carlos Gómez Ruiz</option>
+                <option value = "María López Hernández">María López Hernández</option>
+                <input type="submit" value="Carnet seleccionado" onclick="leer_o_escribir(1)"><br><br>
+                <input type="submit" value="Todos los carnets" onclick="leer_o_escribir(2)"><br><br>
             </select>
         </form>
         <a href="{% url 'app0:index'%}">Volver</a>

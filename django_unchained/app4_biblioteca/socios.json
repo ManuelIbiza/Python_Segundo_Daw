@@ -1,0 +1,22 @@
+{
+  "socios": [
+    {
+      "nombre_apellidos": "Laura Fernández Martín",
+      "fecha_nacimiento": "1992-07-14",
+      "numero_carnet": "BIB2025-001",
+      "foto": "\\static\\images\\chungo.png"
+    },
+    {
+      "nombre_apellidos": "Carlos Gómez Ruiz",
+      "fecha_nacimiento": "1988-11-02",
+      "numero_carnet": "BIB2025-002",
+      "foto": "\\static\\images\\perro_sanxe.png"
+    },
+    {
+      "nombre_apellidos": "María López Hernández",
+      "fecha_nacimiento": "2001-03-27",
+      "numero_carnet": "BIB2025-003",
+      "foto": "\\static\\images\\jacinta.png"
+    }
+  ]
+}

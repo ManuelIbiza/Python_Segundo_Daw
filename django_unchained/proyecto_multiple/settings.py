@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'app1',
     'app2',
     'app3_json',
+    'app4_biblioteca',
 ]
 
 MIDDLEWARE = [
