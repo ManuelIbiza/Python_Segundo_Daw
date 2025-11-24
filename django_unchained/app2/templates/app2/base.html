@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
-    </head>
-    <body>
-        APP2<br>
-        {% comment %}
-        Enlace sin usar el template tag url
-        {% endcomment %}
-        <a href="/">Volver</a>
-    </body>
+
+<head>
+    {% load static %}
+    <title>Formulario con Ajax</title>
+    <script src="{% static 'app2/js/funciones.js' %}"></script>
+</head>
+
+<body>
+    <h1>Acierta el número entre 0 y 1000</h1>
+    <div>
+        <label>Introduce tu suposición:</label>
+        <input type="text" id="texto1" name="texto1"><br><br>
+
+        <button id="pulsar" type="button" onclick="conclusion()">Enviar</button>
+    </div>
+
+    <p id="conclusion"></p>
+</body>
 </html>
